@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishrut Vyas | Java Programmer Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <!-- Vanta.js for animated backgrounds -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <!-- Matrix Rain Effect -->
+  <script src="https://cdn.jsdelivr.net/gh/stevenlei/matrix-rain@latest/matrix-rain.min.js"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <!-- Navbar -->
+  <header class="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur shadow">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <div class="text-2xl font-bold">Vishrut Vyas</div>
+      <ul class="hidden md:flex space-x-8 font-semibold">
+        <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="#experience" class="hover:text-blue-600 transition">Experience</a></li>
+        <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+        <li><a href="#education" class="hover:text-blue-600 transition">Education</a></li>
+        <li><a href="#certifications" class="hover:text-blue-600 transition">Certifications</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+      </ul>
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon" class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menu-btn" class="md:hidden p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 px-6 py-4">
+      <ul class="flex flex-col space-y-4 font-semibold">
+        <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="#experience" class="hover:text-blue-600 transition">Experience</a></li>
+        <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+        <li><a href="#education" class="hover:text-blue-600 transition">Education</a></li>
+        <li><a href="#certifications" class="hover:text-blue-600 transition">Certifications</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-24">
+    <!-- Home / Hero Section -->
+    <section id="home" class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden" style="background: none;">
+      <div id="vanta-hero" class="absolute inset-0 w-full h-full z-0"></div>
+      <div class="relative z-10 p-8 rounded-3xl border-8 border-white dark:border-gray-800 shadow-2xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg" style="box-shadow: 0 8px 32px 0 rgba(127,0,255,0.2);">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-fuchsia-500 via-orange-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg">Vishrut Vyas</h1>
+        <h2 class="text-2xl md:text-4xl font-bold text-blue-600 mb-2 tracking-widest">Java Programmer</h2>
+        <p class="text-xl md:text-2xl max-w-2xl mb-6 font-medium text-gray-800 dark:text-gray-200">Crafting robust solutions with code. <span class="bg-gradient-to-r from-yellow-400 via-pink-500 to-blue-400 bg-clip-text text-transparent font-bold">Building impactful software</span> and bringing ideas to life.</p>
+        <a href="#contact" class="inline-block bg-gradient-to-r from-fuchsia-500 to-blue-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 hover:from-blue-500 hover:to-fuchsia-500 transition-all duration-300">Contact Me</a>
+      </div>
+      <!-- Wavy SVG Divider -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180" style="z-index:2;">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-24">
+          <path d="M0,0V46.29c47.29,22,104.29,29.05,158,17.39C230.57,51.53,284.29,17.53,339,8.29c54.29-9.24,104.29,10.76,158,27.39,53.71,16.63,109.71,30.63,163,17.39,53.71-13.24,104.29-53.24,158-61.53,53.71-8.29,109.71,22.71,163,35.53,53.71,12.82,104.29,6.82,158-8.29V0Z" opacity=".25" fill="#fff"/>
+          <path d="M0,0V15.81C47.29,36.81,104.29,51.81,158,45.81c53.71-6,107.43-38,162.14-45.81C374.43-7,428.14,17,482.86,32.81c54.29,15.81,108.57,21.81,162.86,13.81,54.29-8,108.57-32,162.86-36.81,54.29-4.81,108.57,13.81,162.86,27.81,54.29,14,108.57,22,162.86,13.81V0Z" opacity=".5" fill="#fff"/>
+          <path d="M0,0V5.63C47.29,27.63,104.29,53.63,158,53.63c53.71,0,107.43-26,162.14-32.63C374.43,14,428.14,38,482.86,48.63c54.29,10.63,108.57,6.63,162.86-6.63,54.29-13.26,108.57-37.26,162.86-38.63,54.29-1.37,108.57,20.63,162.86,32.63,54.29,12,108.57,14,162.86,6.63V0Z" fill="#fff"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-20 bg-gradient-to-br from-blue-50 via-pink-50 to-yellow-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 overflow-hidden">
+      <canvas id="matrix-canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
+      <div class="absolute inset-0 flex flex-wrap justify-center items-center z-0 pointer-events-none">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-12 h-12 m-4 animate-float"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 m-4 animate-float"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-12 h-12 m-4 animate-float"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-12 h-12 m-4 animate-float"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 m-4 animate-float"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="w-12 h-12 m-4 animate-float"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg" alt="Excel" class="w-12 h-12 m-4 animate-float"/>
+      </div>
+      <div class="container mx-auto px-4 max-w-4xl relative z-10">
+        <h2 class="text-4xl font-extrabold mb-6 text-center bg-gradient-to-r from-blue-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">About Me</h2>
+        <p class="text-xl mb-8 text-center font-medium text-gray-700 dark:text-gray-200">I am a dedicated Java programmer with a strong foundation in web and software development. My expertise spans Java, HTML, CSS, Python, JavaScript, SQL, and Excel, complemented by leadership and management skills. I thrive in collaborative environments and am passionate about continuous learning and growth.</p>
+        <div class="flex flex-wrap justify-center gap-8">
+          <div class="bg-white/80 dark:bg-gray-800/80 rounded-2xl border-4 border-gradient-to-br from-fuchsia-400 to-blue-400 shadow-xl p-8 w-72 hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold mb-2 text-blue-600">Technical Skills</h3>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-200">
+              <li>Java</li>
+              <li>HTML &amp; CSS</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>Excel</li>
+              <li>Tableau</li>
+            </ul>
+          </div>
+          <div class="bg-white/80 dark:bg-gray-800/80 rounded-2xl border-4 border-gradient-to-br from-yellow-400 to-pink-500 shadow-xl p-8 w-72 hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold mb-2 text-pink-500">Soft Skills</h3>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-200">
+              <li>Leadership</li>
+              <li>Management</li>
+              <li>Teamwork</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-10 text-center">Experience</h2>
+        <ol class="relative border-l-4 border-blue-600 ml-4">
+          <!-- Deloitte Certificate Experience Entry -->
+          <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-green-600 rounded-full -left-5 ring-4 ring-white dark:ring-gray-900">
+              <i class="fa-solid fa-certificate text-white"></i>
+            </span>
+            <h3 class="font-semibold text-xl">Deloitte Data Analytics Job Simulation</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400">June 2025</time>
+            <p class="mb-4 text-base font-normal text-gray-700 dark:text-gray-200">Completed practical tasks in Data Analysis and Forensic Technology as part of Deloitte's Data Analytics Job Simulation.</p>
+          </li>
+          <!-- Bharat Intern -->
+          <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-600 rounded-full -left-5 ring-4 ring-white dark:ring-gray-900">
+              <i class="fa-solid fa-laptop-code text-white"></i>
+            </span>
+            <h3 class="font-semibold text-xl">Bharat Intern – Front End Developer</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400">Sept–Oct 2023</time>
+            <p class="mb-4 text-base font-normal text-gray-700 dark:text-gray-200">Worked on building responsive and interactive web interfaces using modern front-end technologies.</p>
+          </li>
+          <!-- CipherByte -->
+          <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-600 rounded-full -left-5 ring-4 ring-white dark:ring-gray-900">
+              <i class="fa-solid fa-code text-white"></i>
+            </span>
+            <h3 class="font-semibold text-xl">CipherByte Technologies – Java Programmer</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400">March–April 2024</time>
+            <p class="mb-4 text-base font-normal text-gray-700 dark:text-gray-200">Developed Java-based solutions and contributed to backend logic and application performance.</p>
+          </li>
+          <!-- Codsoft -->
+          <li class="ml-6">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-600 rounded-full -left-5 ring-4 ring-white dark:ring-gray-900">
+              <i class="fa-solid fa-terminal text-white"></i>
+            </span>
+            <h3 class="font-semibold text-xl">Codsoft – Python Programmer</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400">June–July 2024</time>
+            <p class="mb-4 text-base font-normal text-gray-700 dark:text-gray-200">Created Python scripts and tools, focusing on automation and data processing.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-br from-fuchsia-50 via-blue-50 to-yellow-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-4xl font-extrabold mb-10 text-center bg-gradient-to-r from-fuchsia-500 via-blue-500 to-yellow-400 bg-clip-text text-transparent">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Amazon Clone -->
+          <div class="relative bg-white/90 dark:bg-gray-800/90 rounded-3xl border-4 border-gradient-to-br from-yellow-400 via-fuchsia-400 to-blue-400 shadow-2xl p-8 group hover:scale-105 hover:shadow-fuchsia-400/40 transition-all duration-300 overflow-hidden">
+            <div class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-yellow-400 to-fuchsia-400 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+            <h3 class="text-2xl font-bold mb-2 text-fuchsia-600">Amazon Website Clone</h3>
+            <p class="mb-4 text-gray-700 dark:text-gray-200">A self-made clone that functions similarly to the real Amazon site.</p>
+            <a href="https://github.com/yourusername/amazon-clone" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:underline">
+              <i class="fa-brands fa-github"></i> GitHub: Amazon Clone
+            </a>
+          </div>
+          <!-- Password Generator -->
+          <div class="relative bg-white/90 dark:bg-gray-800/90 rounded-3xl border-4 border-gradient-to-br from-blue-400 via-yellow-400 to-pink-400 shadow-2xl p-8 group hover:scale-105 hover:shadow-blue-400/40 transition-all duration-300 overflow-hidden">
+            <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-yellow-400 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">Password Generator</h3>
+            <p class="mb-4 text-gray-700 dark:text-gray-200">An interactive tool that creates strong passwords based on minimal input.</p>
+            <a href="https://github.com/yourusername/password-generator" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:underline">
+              <i class="fa-brands fa-github"></i> GitHub: Password Generator
+            </a>
+          </div>
+          <!-- Sorting Visualizer -->
+          <div class="relative bg-white/90 dark:bg-gray-800/90 rounded-3xl border-4 border-gradient-to-br from-pink-400 via-blue-400 to-yellow-400 shadow-2xl p-8 group hover:scale-105 hover:shadow-yellow-400/40 transition-all duration-300 overflow-hidden">
+            <div class="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-pink-400 to-blue-400 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+            <h3 class="text-2xl font-bold mb-2 text-yellow-500">Sorting Visualizer (Java Project)</h3>
+            <p class="mb-4 text-gray-700 dark:text-gray-200">A desktop GUI tool that visually demonstrates various sorting algorithms in real time using Java and Swing.</p>
+            <span class="text-gray-500 flex items-center gap-2"><i class="fa-solid fa-file-code"></i> Based on files: SortingVisualizer.java, VisualizerFrame.java</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-3xl font-bold mb-6 text-center">Education</h2>
+        <div class="flex flex-col md:flex-row justify-center gap-8">
+          <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-6 flex-1">
+            <h3 class="font-semibold text-xl mb-2">B.Tech, JECRC University</h3>
+            <p class="text-gray-700 dark:text-gray-200">2022–Present</p>
+          </div>
+          <div class="bg-white dark:bg-gray-700 rounded-lg shadow p-6 flex-1">
+            <h3 class="font-semibold text-xl mb-2">Schooling, Pioneer Convent</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section id="certifications" class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-3xl font-bold mb-6 text-center">Certifications & Achievements</h2>
+        <ul class="list-disc list-inside text-lg text-gray-700 dark:text-gray-200 space-y-2 mb-8">
+          <li>Java Certification (CipherByte)</li>
+          <li>Deloitte Data Analytics Job Simulation (2025)</li>
+          <li>Full Stack Intern (Bharat Intern)</li>
+          <li>JU Premier League Winner, Homecoming Runner-Up (Football)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-4 max-w-2xl">
+        <h2 class="text-3xl font-bold mb-6 text-center">Contact</h2>
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="mailto:your.email@example.com" class="text-2xl hover:text-blue-600 transition" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-2xl hover:text-blue-600 transition" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/yourusername" target="_blank" class="text-2xl hover:text-blue-600 transition" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <form class="bg-white dark:bg-gray-700 rounded-lg shadow p-6 space-y-4">
+          <div>
+            <label for="name" class="block mb-1 font-semibold">Name</label>
+            <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+          </div>
+          <div>
+            <label for="email" class="block mb-1 font-semibold">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+          </div>
+          <div>
+            <label for="message" class="block mb-1 font-semibold">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+    <p class="text-gray-600 dark:text-gray-400">&copy; 2024 Vishrut Vyas. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for interactivity -->
+  <script src="main.js"></script>
+</body>
+</html> 
