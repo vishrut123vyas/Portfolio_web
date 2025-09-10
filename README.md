@@ -11,6 +11,7 @@ A modern, responsive, and interactive static portfolio website built with HTML, 
 - Interactive project cards
 - Static contact form and social links
 - Google Fonts (Poppins), Lucide & FontAwesome icons
+- User friendly interface
 
 ## Sections
 - **Home:** Hero section with name, title, and tagline
