@@ -12,7 +12,7 @@ A modern, responsive, and interactive static portfolio website built with HTML, 
 - Static contact form and social links
 - Google Fonts (Poppins), Lucide & FontAwesome icons
 - User friendly interface
-
+- info representation anout the creator
 ## Sections
 - **Home:** Hero section with name, title, and tagline
 - **About:** Bio, technical and soft skills
